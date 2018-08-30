@@ -1,0 +1,222 @@
+int fadeConst = 7; //<>// //<>//
+int Fadetime = 250;
+
+public void muteMaster() {
+  int collect[] = {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x01, 0x4E, 0x21, 0x00, 0x00, 0x00, 0x01, 0x4A, 0x03 };
+
+  int l;
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+
+  for (int i=0; i<l; i++) {
+    println(collect[i]);
+    BSS.write(collect[i]);
+  }
+  println(" --------------------------------" );
+}
+
+public void unMuteMaster() {
+
+  int collect[] = {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x01, 0x4E, 0x21, 0x00, 0x00, 0x00, 0x00, 0x4B, 0x03};
+  int l;
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+
+  for (int i=0; i<l; i++) {
+    println(collect[i]);
+    BSS.write(collect[i]);
+  }
+  println(" --------------------------------" );
+}
+
+public void BSSFadeOutSVSI() {
+
+  //  int collect[] = {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x01, 0xFF, 0xFC, 0x19, 0x72, 0x4E, 0x03};
+
+  int collect[] = {0x02, 0x90, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x01, 0xFF, 0xF6, 0x00, 0x00, 0x37, 0x03  };
+
+
+  int l;
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+  for (int j=0; j<fadeConst; j++) {
+    for (int i=0; i<l; i++) {
+      println(collect[i]);
+      BSS.write(collect[i]);
+     
+    }
+     delay(Fadetime);
+  }
+  println(" --------------------------------" );
+}
+
+public void BSSFadeInSVSI() {
+
+  //int collect[] = {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x26, 0x03};
+  int collect[] = {0x02, 0x90, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x01, 0x00, 0x0A, 0x00, 0x00, 0x34, 0x03   };
+
+
+  int l;
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+  for (int j=0; j<fadeConst; j++) {
+    for (int i=0; i<l; i++) {
+      println(collect[i]);
+      BSS.write(collect[i]);
+      
+    }
+    delay(Fadetime);
+  }
+  println(" --------------------------------" );
+}
+
+
+public void BSSFadeOutVLC() {
+
+  //int collect[] = {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x26, 0x03};
+  int collect[] = {0x02, 0x90, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x1B, 0x82, 0xFF, 0xF6, 0x00, 0x00, 0x34, 0x03   };
+
+
+  int l;
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+  for (int j=0; j<fadeConst; j++) {
+    for (int i=0; i<l; i++) {
+      println(collect[i]);
+      BSS.write(collect[i]);
+      
+    }
+    delay(Fadetime);
+  }
+  println(" --------------------------------" );
+}
+
+public void BSSFadeInVLC() {
+
+  int collect[] = {0x02, 0x90, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x1B, 0x82, 0x00, 0x0A, 0x00, 0x00, 0x37, 0x03 };
+
+
+  int l;
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+  for (int j=0; j<fadeConst; j++) {
+    for (int i=0; i<l; i++) {
+      println(collect[i]);
+      BSS.write(collect[i]);
+      
+    }
+    delay(Fadetime);
+  }
+  println(" --------------------------------" );
+}
+
+public void BSSmuteVLC() {
+
+  int collect[] = {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x22, 0x00, 0x00, 0x00, 0x01, 0x04, 0x03};
+
+
+
+  int l;
+
+
+
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+
+  for (int i=0; i<l; i++) {
+    println(collect[i]);
+    BSS.write(collect[i]);
+  }
+  println(" --------------------------------" );
+}
+
+public void BSSUnMuteVLC() {
+
+
+  int collect[] =  {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x22, 0x00, 0x00, 0x00, 0x00, 0x05, 0x03};
+
+  int l;
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+
+  for (int i=0; i<l; i++) {
+    println(collect[i]);
+    BSS.write(collect[i]);
+  }
+  println(" --------------------------------" );
+}
+
+
+
+
+public void BSSMuteWL() {
+
+
+  int collect[] =  {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x20, 0x00, 0x00, 0x00, 0x01, 0x1B, 0x86, 0x03};
+
+  int l;
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+
+  for (int i=0; i<l; i++) {
+    println(collect[i]);
+    BSS.write(collect[i]);
+  }
+  println(" --------------------------------" );
+}
+
+
+
+public void BSSunMuteWL() {
+
+
+  int collect[] =  {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x20, 0x00, 0x00, 0x00, 0x00, 0x07, 0x03};
+
+  int l;
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+
+  for (int i=0; i<l; i++) {
+    println(collect[i]);
+    BSS.write(collect[i]);
+  }
+  println(" --------------------------------" );
+}
+
+
+
+public void BSSmuteSVSI() {
+
+  int collect[] = {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x21, 0x00, 0x00, 0x00, 0x01, 0x07, 0x03};
+
+
+
+  int l;
+
+
+
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+
+  for (int i=0; i<l; i++) {
+    println(collect[i]);
+    BSS.write(collect[i]);
+  }
+  println(" --------------------------------" );
+}
+
+public void BSSUnMuteSVSI() {
+
+
+  int collect[] =  {0x02, 0x88, 0x33, 0x9C, 0x1B, 0x83, 0x00, 0x01, 0x1B, 0x82, 0x00, 0x21, 0x00, 0x00, 0x00, 0x00, 0x1B, 0x86, 0x03};
+
+  int l;
+  l = collect.length;
+  println(" -----------"+ l+ "---------------------" );
+
+  for (int i=0; i<l; i++) {
+    println(collect[i]);
+    BSS.write(collect[i]);
+  }
+  println(" --------------------------------" );
+}

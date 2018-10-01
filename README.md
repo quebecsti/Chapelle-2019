@@ -13,3 +13,9 @@ http://www.lagers.org.uk/g4p/index.html
 
 GUI G4P Library
 http://www.lagers.org.uk/g4p/download.html
+
+
+How-to-Install-a-Contributed-Library
+https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library
+
+
